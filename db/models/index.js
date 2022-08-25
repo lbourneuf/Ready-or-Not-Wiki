@@ -5,6 +5,8 @@ module.exports = {
   // and User: require('./user') here
   ...require("./maps"),
   ...require("./missions"),
+  ...require("./assaultRifles"),
+  ...require("./submachineGuns"),
 };
 
 // then, in your API, you'll require the appropriate model
