@@ -7,6 +7,7 @@ const {
   createMissions,
   getAllMissions,
   getMaptById,
+  getMapByName,
 } = require("./");
 
 async function dropTables() {
@@ -59,8 +60,7 @@ async function createInitialMaps() {
       description:
         "With the impetus to now crack down on mobsters operating in Los Suenos, LSPD raids a suspected trafficking exchange point in North Hills. Exercise extreme caution.",
       missionsAvailable: "Bomb Threat, Barricaded Suspects",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/1/1a/Caesar%27s_Cars_Dealership_location.png/revision/latest?cb=20220315193453",
+      imageUrl: "https://i.gyazo.com/523a5067aac57a05630f5a9c52a1d848.png",
     });
 
     const map2 = await createMaps({
@@ -68,8 +68,7 @@ async function createInitialMaps() {
       description:
         "An officer has been killed in the line of duty. He lays dead on the driveway of Cherryessa Farm. Your team is to deploy and clear the strange compound.",
       missionsAvailable: "Barricaded Suspects, Raid",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/2/2e/Cherryessa_Farm_location.png/revision/latest?cb=20220315193533",
+      imageUrl: "https://i.gyazo.com/cc200382a0757227d407d9db06f830b1.png",
     });
 
     const map3 = await createMaps({
@@ -78,8 +77,7 @@ async function createInitialMaps() {
         "Seizing a moment of opportunity, a posse of delinquent meth-head kids execute their plane in order to support a crippling addiction.",
       missionsAvailable:
         "Barricaded Suspects, Raid, Active Shooter, Bomb Threat, Hostage Rescue",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/c/ca/4U_Gas_Station_location.png/revision/latest?cb=20220315193203",
+      imageUrl: "https://i.gyazo.com/d6663dfb2475e85c8591c44f9c61795b.png",
     });
 
     const map4 = await createMaps({
@@ -87,8 +85,7 @@ async function createInitialMaps() {
       description:
         "The detectives have been following a new lead to locate a key source of methamphetamine storage in Los Suenos, tracing a potential 'affordable housing' development in 213 Park.",
       missionsAvailable: "Barricaded Suspects, Raid",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/2/21/213_Park_Homes_location.png/revision/latest?cb=20220315193413",
+      imageUrl: "https://i.gyazo.com/9437fe629fec7ea466dc87b421bdbbdb.png",
     });
 
     const map5 = await createMaps({
@@ -96,8 +93,7 @@ async function createInitialMaps() {
       description:
         "US airstrikes have targeted villages housing a notorious terrorist group in Northern Yemen, which has ties to the US cells. One such cell is known as The Hand, who have enacted a domestic response to the military incurison.",
       missionsAvailable: "Barricaded Suspects",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/f/ff/Club_Entrance.png/revision/latest?cb=20220621163818",
+      imageUrl: "https://i.gyazo.com/a3ab63962eaf2301df2f572f82855745.jpg",
     });
 
     const map6 = await createMaps({
@@ -105,8 +101,7 @@ async function createInitialMaps() {
       description:
         "A group calling themselves the 'Left Behind' are taking matters into their own hands by attempting to kill a politician responsible for a budget cut proposal to the already under-supported VAMC in Los Suenos",
       missionsAvailable: "Barricaded Suspects",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/a/a5/Livelaughlove.png/revision/latest?cb=20220620233742",
+      imageUrl: "https://i.gyazo.com/012f17d299dec59bf2a3cb6dd5e93c61.png",
     });
 
     const map7 = await createMaps({
@@ -115,8 +110,7 @@ async function createInitialMaps() {
         "Joint strike operation between metro SWAT, FBI HRT and ATF. Rainy Weather. Your platoon has been tasked with clearing Warehouse One and the Void Shipping Services facility.",
       missionsAvailable:
         "Barricaded Suspects, Raid, Bomb Threat, Hostage Rescue",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/e/eb/Port_Hoken_location.png/revision/latest?cb=20220315193550",
+      imageUrl: "https://i.gyazo.com/c186b94086060e227bb46b454586bd43.png",
     });
 
     const map8 = await createMaps({
@@ -125,8 +119,7 @@ async function createInitialMaps() {
         "D Platoon are to deploy on-site and clear the key floor of this hotel. Multiple civilians inside. Very dangerous, deceptive suspect. Be on your a-game.",
       missionsAvailable:
         "Barricaded Suspects, Raid, Bomb Threat, Hostage Rescue",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/c/cb/Wenderly_Hills_Hotel_location.png/revision/latest?cb=20220315193626",
+      imageUrl: "https://i.gyazo.com/2cf5517c5a1df02f11c54f28ab51a7ce.png",
     });
 
     const map9 = await createMaps({
@@ -134,8 +127,7 @@ async function createInitialMaps() {
       description:
         "Having taken down a distribution center for an illegal child-pornography ring operating out of Los Suenos, the LSPD cyber-crime team has now located the man profiting from its sales. LSPD SWAT have been sent to his home on a warrant service.",
       missionsAvailable: "Barricaded Suspects",
-      imageUrl:
-        "https://static.wikia.nocookie.net/ready-or-not/images/7/7b/Valley_Party.jpg/revision/latest?cb=20220621191550",
+      imageUrl: "https://i.gyazo.com/ea94d6160cbc4b2e783e647be657ed5b.jpg",
     });
     console.log("Finished creating initial maps...");
   } catch (error) {
@@ -219,6 +211,10 @@ async function testDB() {
     console.log("Calling getMapById");
     const map1 = await getMaptById(1);
     console.log("Get map by Id result: ", map1);
+
+    console.log("Calling getMapByName");
+    const neon = await getMapByName("Neon Nightclub");
+    console.log("Get map by name result: ", neon);
 
     // console.log("Calling getAllMissions");
     // const missions = await getAllMissions();
