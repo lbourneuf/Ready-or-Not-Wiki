@@ -34,8 +34,33 @@ async function getAllMaps() {
   }
 }
 
+async function getMaptById(mapId) {
+  if (!mapId) {
+    return;
+  }
+
+  try {
+    const {
+      rows: [map],
+    } = await client.query(
+      `
+      SELECT *
+      FROM maps
+      WHERE id=$1
+    
+    `,
+      [mapId]
+    );
+    return map;
+  } catch (error) {
+    console.error("Failed to get map by Id");
+    throw error;
+  }
+}
+
 module.exports = {
   // add your database adapter fns here
   createMaps,
   getAllMaps,
+  getMaptById,
 };
