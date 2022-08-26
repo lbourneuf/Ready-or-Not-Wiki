@@ -14,6 +14,20 @@ const {
   createSubmachineGuns,
   getAllSubmachineGuns,
   getSubmachineGunById,
+  createShotguns,
+  getAllShotguns,
+  getShotgunById,
+  createLaunchers,
+  getAllLaunchers,
+  createLessLethal,
+  getAllLessLethals,
+  getLessLethalById,
+  createSidearms,
+  getAllSidearms,
+  getSidearmById,
+  createAmmoTypes,
+  getAllAmmoTypes,
+  getAmmoTypeById,
 } = require("./");
 
 async function dropTables() {
@@ -24,6 +38,11 @@ async function dropTables() {
       DROP TABLE IF EXISTS missions;
       DROP TABLE IF EXISTS assault_rifles;
       DROP TABLE IF EXISTS submachine_guns;
+      DROP TABLE IF EXISTS shotguns;
+      DROP TABLE IF EXISTS launchers;
+      DROP TABLE IF EXISTS less_lethal;
+      DROP TABLE IF EXISTS sidearms;
+      DROP TABLE IF EXISTS ammo_types;
     `);
     console.log("Finished dropping tables");
   } catch (error) {
@@ -67,7 +86,47 @@ async function createTables() {
           caliber varchar(255) NOT NULL,
           magazine_size INTEGER NOT NULL,
           image_url varchar(255) NOT NULL
-        )
+        );
+
+        CREATE TABLE shotguns (
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          caliber varchar(255) NOT NULL,
+          magazine_size INTEGER NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE launchers (
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE less_lethal (
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE sidearms (
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          caliber varchar(255) NOT NULL,
+          magazine_size INTEGER NOT NULL,
+          image_url varchar(255) NOT NULL
+
+        );
+
+        CREATE TABLE ammo_types (
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
     
     `);
 
@@ -300,10 +359,209 @@ async function createInitialSubmachineGuns() {
       magazineSize: 30,
       imageUrl: "https://i.gyazo.com/f9bd4188d67441e2e2b1c6e99779f8ef.jpg",
     });
+    const sub2 = await createSubmachineGuns({
+      name: "MP5A2",
+      description:
+        "This iconic submachine gun set the standard for law enforcement for half a century. Although modern platforms have since overtaken it, you'll be hard pressed to find a more reliable, controllable, and ubiquitous companion.",
+      caliber: "9x19mm",
+      magazineSize: 30,
+      imageUrl: "https://i.gyazo.com/7f37f3ecdf0c3501a7fc25b4e76ad063.jpg",
+    });
+
+    const sub3 = await createSubmachineGuns({
+      name: "MPX",
+      description:
+        "This modern pistol caliber carbine combines the best aspects of a submachine gun with the controls of the AR platform, maximizing familiarity and comfort. Low recoil and fast to reload.",
+      caliber: "9x19mm",
+      magazineSize: 30,
+      imageUrl: "https://i.gyazo.com/7cb5b3c7792f9a3333a2e0b52370fd47.jpg",
+    });
+
+    const sub4 = await createSubmachineGuns({
+      name: "MP5A3",
+      description:
+        "A modernized version of the MP5, with an improvement kit that extends its usability within the requirements of weapons systems in this current decade.",
+      caliber: "9x19mm",
+      magazineSize: 30,
+      imageUrl: "https://i.gyazo.com/9800285c34b0f0cc6c07a8373825fc62.jpg",
+    });
+
+    const sub5 = await createSubmachineGuns({
+      name: "MP9",
+      description:
+        "An Austrian design, upgraded for modern use. Compact, lightweight, and high rate of fire makes it suitable for close range engagements.",
+      caliber: "9x19mm",
+      magazineSize: 30,
+      imageUrl: "https://i.gyazo.com/cfe84e0646804b9ca83386feaeaaeafe.jpg",
+    });
+
+    const sub6 = await createSubmachineGuns({
+      name: "UMP-45",
+      description:
+        "Intended as a sucessor to the dated MP5, this slow firing submachine gun chambered in .45 ACP boasts stopping power and excellent ergonomics. Its stock can be folded for a more compact package. ",
+      caliber: ".45 ACP",
+      magazineSize: 30,
+      imageUrl: "https://i.gyazo.com/9e3c6cee01476676b916a8d10b8f3813.jpg",
+    });
   } catch (error) {
     console.error("Error creating initial submachine guns");
     throw error;
   }
+}
+
+async function createInitialShotguns() {
+  try {
+    const shotgun1 = await createShotguns({
+      name: "870 CQB",
+      description:
+        "Iconic pump action shotgun found in police cruisers across the world. This workhorse features a rail for optics and an integrated flashlight. It may be slow firing, but it will never let you down in the field. Fires 12 Gauge Buckshot or Slug shells from a 8-round internal magazine.",
+      caliber: "12g Buckshot/Slug",
+      magazineSize: 8,
+      imageUrl: "https://i.gyazo.com/75de6ecd9b4084dd7b7b7e04a6240daa.jpg",
+    });
+
+    const shotgun2 = await createShotguns({
+      name: "B1301",
+      description:
+        "A sturdy tactical shotgun hailing from Italy. Its unique bolt design reduces muzzle climb compared to its counterparts.",
+      caliber: "12g Buckshot/Slug",
+      magazineSize: 12,
+      imageUrl: "https://i.gyazo.com/c150e4e8aee7ef17e31a32c40cd53f6e.jpg",
+    });
+
+    const shotgun3 = await createShotguns({
+      name: "M4 Super 90",
+      description:
+        "This gas powered combat shotgun is widely considered the best of its breed. Reliable and fast firing, its only major drawback is how quickly you'll empty it if you're not careful.",
+      caliber: "12g Buckshot/Slug",
+      magazineSize: 8,
+      imageUrl: "https://i.gyazo.com/0d4541ff8875e59547ff141efe547b5f.jpg",
+    });
+  } catch (error) {
+    console.error("Error creating initial shotguns");
+    throw error;
+  }
+}
+
+async function createInitialLaunchers() {
+  try {
+    const launcher1 = await createLaunchers({
+      name: "M32A1 Flash",
+      description:
+        "A rotary grenade launcher originally made for military use with high-explosive ammunition, it has found its use with Los Suenos' riot control units and SWAT teams.",
+      imageUrl: "https://i.gyazo.com/dba9db41c158ab81bb525a6b32729b98.jpg",
+    });
+  } catch (error) {
+    console.error("Error creating initial launchers");
+    throw error;
+  }
+}
+
+async function createInitialLessLethals() {
+  try {
+    const lessLethal1 = await createLessLethal({
+      name: "Beanbag Shotgun",
+      description:
+        "This less lethal shotgun fires powerful 12GA beanbag rounds that immobilize suspects on impact. Requires control, as repeat shots have the potential to unintentionally kill your target.",
+      imageUrl: "https://i.gyazo.com/5f9af77ec334ae1ea7ff941d9b6c5dd0.jpg",
+    });
+
+    const lessLethal2 = await createLessLethal({
+      name: "R7 Launcher",
+      description:
+        "This modern, mag-fed pepperball gun features full length rails and familiar AR-style controls. Lower capacity than its cousin, the TAC700, but customizable and with a more open field of view. Can also fire baton rounds.",
+      imageUrl: "https://i.gyazo.com/d561e19dcedec7647b0fc6943663308a.jpg",
+    });
+  } catch (error) {
+    console.error("Error creating initial less lethals");
+    throw error;
+  }
+}
+
+async function createInitialSidearms() {
+  try {
+    const sidearm1 = await createSidearms({
+      name: ".357 Magnum",
+      description:
+        "This powerful revolver is limited to only six shots but boasts a substantial power behind each one. High on recoil and awkward to reload, it's a relic of policing that finds a home in the hands of officers that stand by tradition.",
+      caliber: ".357",
+      magazineSize: 6,
+      imageUrl: "https://i.gyazo.com/68e66038ce664a939cf83f1dcf6aa578.jpg",
+    });
+
+    const sidearm2 = await createSidearms({
+      name: "G19",
+      description:
+        "Chambered in 9x19mm, the G19's dependability and high capacity in an age when revolvers still ruled the world have found it a permanent home in public and private security agencies worldwide.",
+      caliber: "9x19mm",
+      magazineSize: 15,
+      imageUrl: "https://i.gyazo.com/497d347d437ba40aefc4a4752ee9d41a.jpg",
+    });
+
+    const sidearm3 = await createSidearms({
+      name: "M45A1",
+      description:
+        "An improved version of the 1911 developed to meet the requirements of special operation forces in the US military, it has found popularity in law enforcement use with its accurate barrel and sleep ergonomics. Fires .45 ACP from a 14-round magazine.",
+      caliber: ".45 ACP",
+      magazineSize: 14,
+      imageUrl: "https://i.gyazo.com/f63a9b1c96251183fb5f626ef0960a1a.jpg",
+    });
+
+    const sidearm4 = await createSidearms({
+      name: "P92X",
+      description:
+        "The standard issue service pistol of the United States military for nearly thirty years, this modernized design has found a second life in the hands of police units across the country. Precise and reliable, it requires little modification to be effective in the field.",
+      caliber: "9x19mm",
+      magazineSize: 15,
+      imageUrl: "https://i.gyazo.com/e1c4c359eb8139cb8e000eee96de39c9.jpg",
+    });
+
+    const sidearm5 = await createSidearms({
+      name: "57 USG",
+      description:
+        "This modern, high capacity pistol boasts a proprietary cartridge with excellent penetration. Useful for bypassing body armor, but suffers from worse handling than some other designs. Fires 5.7x28mm from a 17-round magazine.",
+      caliber: "5.7x28mm",
+      magazineSize: 17,
+      imageUrl: "https://i.gyazo.com/327f24dd3f173a6274dd10676db5c769.jpg",
+    });
+
+    const sidearm6 = await createSidearms({
+      name: "USP45",
+      description:
+        "This German made pistol is chambered in .45 ACP and boasts a higher capacity than other handguns of its caliber. Excellent iron sights and ergonomics have made it a popular option for police.",
+      caliber: ".45 ACP",
+      magazineSize: 12,
+      imageUrl: "https://i.gyazo.com/8d556a81d21338273656549fcfc7c0af.jpg",
+    });
+
+    const sidearm7 = await createSidearms({
+      name: "Taser",
+      description:
+        "This nonlethal companion is at home in the holsters of police officers everywhere. Useful for stunning noncompliant persons in order to disarm or arrest them. Be wary, as not every target will respond to it the same way.",
+      caliber: "Taser Cartridge",
+      magazineSize: 1,
+      imageUrl: "https://i.gyazo.com/5f2e466c8c32c363b3ff0f00604f6804.jpg",
+    });
+  } catch (error) {
+    console.error("Error creating initial sidearms");
+    throw error;
+  }
+}
+
+async function createInitialAmmoTypes() {
+  const ammo1 = await createAmmoTypes({
+    name: "Armor Piercing",
+    description:
+      "Rifle-caliber Armor Piercing(AP) rounds reduce the effectivness of steel or ceramic plates and shoot through soft body armor like kevlar. Operators must be mindful of over-penetration and what is behind your intended target, especially if they are not wearing body armor.",
+    imageUrl: "https://i.gyazo.com/2488facf4837f2db30e584755efc2150.png",
+  });
+
+  const ammo2 = await createAmmoTypes({
+    name: "Jacketed Hollow Points",
+    description:
+      "Jacketed Hollow Point(JHP) expand on impact, causing greater wounds and reducing the risk of over-penetration in civiian environments. Less effective against armored suspects, however.",
+    imageUrl: "https://i.gyazo.com/480d2a909b661ce5557b3e9b019eb652.png",
+  });
 }
 
 async function buildTables() {
@@ -316,6 +574,11 @@ async function buildTables() {
     await createInitialMissions();
     await createInitialAssaultRifles();
     await createInitialSubmachineGuns();
+    await createInitialShotguns();
+    await createInitialLaunchers();
+    await createInitialLessLethals();
+    await createInitialSidearms();
+    await createInitialAmmoTypes();
   } catch (error) {
     throw error;
   }
@@ -358,8 +621,44 @@ async function testDB() {
     console.log("Get all submachine guns result: ", guns);
 
     console.log("Calling getSubmachineGunById");
-    const gun1 = await getSubmachineGunById(1);
+    const gun1 = await getSubmachineGunById(3);
     console.log("Get submachine gun by id result: ", gun1);
+
+    console.log("Calling getAllShotguns");
+    const shotguns = await getAllShotguns();
+    console.log("Get all shotguns result: ", shotguns);
+
+    console.log("Calling getShotgunById");
+    const shotgun1 = await getShotgunById(1);
+    console.log("Get shotgun by id result: ", shotgun1);
+
+    console.log("Calling getAllLaunchers");
+    const launchers = await getAllLaunchers();
+    console.log("Get all launchers result: ", launchers);
+
+    console.log("Calling getAllLessLethals");
+    const lessLethal = await getAllLessLethals();
+    console.log("Get all less lethal result: ", lessLethal);
+
+    console.log("Calling getLessLethalById");
+    const lessLethal1 = await getLessLethalById(2);
+    console.log("Get less lethal by id result: ", lessLethal1);
+
+    console.log("Calling get all sidearms");
+    const sidearms = await getAllSidearms();
+    console.log("Get all sidearms result: ", sidearms);
+
+    console.log("Calling getSidearmById");
+    const sidearm1 = await getSidearmById(4);
+    console.log("Get sidearm by id result: ", sidearm1);
+
+    console.log("Calling getAllAmmoTypes");
+    const ammo = await getAllAmmoTypes();
+    console.log("Get all ammo types result: ", ammo);
+
+    console.log("Calling get ammo type by id");
+    const ammo1 = await getAmmoTypeById(2);
+    console.log("Get ammo type by id result: ", ammo1);
   } catch (error) {
     console.error("Error testing database");
     throw error;
