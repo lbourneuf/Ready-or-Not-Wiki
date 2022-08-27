@@ -40,6 +40,12 @@ const {
   createDeployables,
   getAllDeployables,
   getDeployableById,
+  createHeadwear,
+  getAllHeadwear,
+  getHeadwearById,
+  createArmorMaterial,
+  getAllArmorMaterial,
+  getArmorMaterialById,
 } = require("./");
 
 async function dropTables() {
@@ -59,6 +65,8 @@ async function dropTables() {
       DROP TABLE IF EXISTS tacticals;
       DROP TABLE IF EXISTS grenades;
       DROP TABLE IF EXISTS deployables;
+      DROP TABLE IF EXISTS headwear;
+      DROP TABLE IF EXISTS armor_material;
     `);
     console.log("Finished dropping tables");
   } catch (error) {
@@ -166,6 +174,20 @@ async function createTables() {
         );
 
         CREATE TABLE deployables(
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE headwear(
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE armor_material(
           id SERIAL PRIMARY KEY,
           name varchar(255) NOT NULL,
           description varchar NOT NULL,
@@ -735,6 +757,71 @@ async function createInitialDeployables() {
   }
 }
 
+async function createInitialHeadwear() {
+  try {
+    const headwear1 = await createHeadwear({
+      name: "NVGS",
+      description:
+        "Bifocal night vision goggles for use in night operations or raids during low-light.",
+      imageUrl: "https://i.gyazo.com/037d27cdb21d44da88fc0b96cfd289c3.jpg",
+    });
+
+    const headwear2 = await createHeadwear({
+      name: "CBRN Riot Gasmask",
+      description:
+        "High-performance chemical protective mask for use when handling irritants such as CS or CN.",
+      imageUrl: "https://i.gyazo.com/7d1c33bb0d064b5d6b2327ae6acd05e1.jpg",
+    });
+
+    const headwear3 = await createHeadwear({
+      name: "Anti-Flash Goggles",
+      description:
+        "The lenses of these tactical goggles are lacquered with a B-ESP coating designed to mitigate bright lights and scratches.",
+      imageUrl: "https://i.gyazo.com/16d042595fa45a92665633cb72fd0232.jpg",
+    });
+
+    const headwear4 = await createHeadwear({
+      name: "Ballistic Facemask",
+      description:
+        "Mask capable of stopping most small-arms projectiles and some less-lethal.",
+      imageUrl: "https://i.gyazo.com/3e8387ff6abac0306b5822a2f40ac7b6.jpg",
+    });
+  } catch (error) {
+    console.error("Error creating initial headwear");
+    throw error;
+  }
+}
+
+async function createInitialArmorMaterial() {
+  try {
+    const material1 = await createArmorMaterial({
+      name: "Kevlar",
+      description:
+        "While not as protective as steel or ceramic plates, this soft body armor allows officers to move quickly and confidently without fully sacrificing protection. A long standing friend of law enforcement.",
+      imageUrl: "https://i.gyazo.com/82559b78fe2ec6f69364aaae7260fde6.png",
+    });
+
+    const material2 = await createArmorMaterial({
+      name: "Steel",
+      description:
+        "Though less often seen in police departments today, Steel Plates provide solid protection against most firearms at the cost of being restrictively heavy. Useful against pistol and all rifle calibers.",
+
+      imageUrl: "https://i.gyazo.com/602fc977e08adbc46cb192c155203273.png",
+    });
+
+    const material3 = await createArmorMaterial({
+      name: "Ceramic",
+      description:
+        "Modern and commomplace, Ceramic Plates are lighter than steel and do a better job of spreading the momentum of a bullet to reduce the felt impact. Useful against pistol and most rifle calibers.",
+
+      imageUrl: "https://i.gyazo.com/99c99e07ce9bbc70e4ad40ad30fce3df.png",
+    });
+  } catch (error) {
+    console.error("Error creating initial armor material");
+    throw error;
+  }
+}
+
 async function buildTables() {
   try {
     client.connect();
@@ -754,6 +841,8 @@ async function buildTables() {
     await createInitialTacticals();
     await createInitialGrenades();
     await createInitialDeployables();
+    await createInitialHeadwear();
+    await createInitialArmorMaterial();
   } catch (error) {
     throw error;
   }
@@ -866,6 +955,22 @@ async function testDB() {
     console.log("Calling getDeploaybleById");
     const deployable1 = await getDeployableById(3);
     console.log("Get deployable by id result: ", deployable1);
+
+    console.log("Calling getAllHeadwear");
+    const headwears = await getAllHeadwear();
+    console.log("Get all headwear result: ", headwears);
+
+    console.log("Calling getHeadwearById");
+    const headwear1 = await getHeadwearById(3);
+    console.log("Get headwear by id result: ", headwear1);
+
+    console.log("Calling getAllArmorMaterial");
+    const materials = await getAllArmorMaterial();
+    console.log("Get all armor material result: ", materials);
+
+    console.log("Calling getArmorMaterialById");
+    const material1 = await getArmorMaterialById(3);
+    console.log("Get armor material by id result: ", material1);
   } catch (error) {
     console.error("Error testing database");
     throw error;

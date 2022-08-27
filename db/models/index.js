@@ -16,6 +16,8 @@ module.exports = {
   ...require("./tacticals"),
   ...require("./grenades"),
   ...require("./deployables"),
+  ...require("./headwear"),
+  ...require("./armorMaterial"),
 };
 
 // then, in your API, you'll require the appropriate model
