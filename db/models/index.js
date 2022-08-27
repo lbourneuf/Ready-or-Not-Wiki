@@ -12,6 +12,10 @@ module.exports = {
   ...require("./lessLethal"),
   ...require("./sidearms"),
   ...require("./ammoTypes"),
+  ...require("./armor"),
+  ...require("./tacticals"),
+  ...require("./grenades"),
+  ...require("./deployables"),
 };
 
 // then, in your API, you'll require the appropriate model
