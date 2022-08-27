@@ -28,6 +28,18 @@ const {
   createAmmoTypes,
   getAllAmmoTypes,
   getAmmoTypeById,
+  createArmor,
+  getAllArmor,
+  getArmorById,
+  createTacticals,
+  getAllTacticals,
+  getTacticalById,
+  createGrenades,
+  getAllGrenades,
+  getGrenadeById,
+  createDeployables,
+  getAllDeployables,
+  getDeployableById,
 } = require("./");
 
 async function dropTables() {
@@ -43,6 +55,10 @@ async function dropTables() {
       DROP TABLE IF EXISTS less_lethal;
       DROP TABLE IF EXISTS sidearms;
       DROP TABLE IF EXISTS ammo_types;
+      DROP TABLE IF EXISTS armor;
+      DROP TABLE IF EXISTS tacticals;
+      DROP TABLE IF EXISTS grenades;
+      DROP TABLE IF EXISTS deployables;
     `);
     console.log("Finished dropping tables");
   } catch (error) {
@@ -122,6 +138,34 @@ async function createTables() {
         );
 
         CREATE TABLE ammo_types (
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE armor (
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE tacticals (
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE grenades(
+          id SERIAL PRIMARY KEY,
+          name varchar(255) NOT NULL,
+          description varchar NOT NULL,
+          image_url varchar(255) NOT NULL
+        );
+
+        CREATE TABLE deployables(
           id SERIAL PRIMARY KEY,
           name varchar(255) NOT NULL,
           description varchar NOT NULL,
@@ -564,6 +608,133 @@ async function createInitialAmmoTypes() {
   });
 }
 
+async function createInitialArmor() {
+  const armor1 = await createArmor({
+    name: "Anti Stab Vest",
+    description:
+      "This reinforced anti-stab vest provides the operator with extra protection against edged weapons, and its lightweight form gives them the capability to carry more equipment.",
+    imageUrl: "https://i.gyazo.com/45c1bc93291698ba7018f76450b9f2be.jpg",
+  });
+  const armor2 = await createArmor({
+    name: "Light Armor",
+    description:
+      "This basic plate carrier allows for peak performance and comfort.",
+    imageUrl: "https://i.gyazo.com/353b07d7ce5f33f45182f148c768effc.jpg",
+  });
+
+  const armor3 = await createArmor({
+    name: "Heavy Armor",
+    description:
+      "This heavy armor vest trades carrying capacity with more ballistic protection and coverage, allowing the operator to shrug off heavy fire.",
+    imageUrl: "https://i.gyazo.com/dfa61676ac764e09e86a224bfeca6fb8.jpg",
+  });
+}
+
+async function createInitialTacticals() {
+  const tactical1 = await createTacticals({
+    name: "Mirrorgun",
+    description: "Allows you to look under doors, and around corners.",
+    imageUrl: "https://i.gyazo.com/96866fcd403f9522b7c9bfcff26f0989.png",
+  });
+
+  const tactical2 = await createTacticals({
+    name: "Breaching Shotgun",
+    description:
+      "Quickly and effectively blows open doors using frangible slugs. Not ideal for combat.",
+    imageUrl: "https://i.gyazo.com/05092a8aad2239a1d544e09f8e43b0d2.png",
+  });
+
+  const tactical3 = await createTacticals({
+    name: "Battering Ram",
+    description: "Knock, knock. Used for getting past doors.",
+    imageUrl: "https://i.gyazo.com/d33b3d00553a2c3a98f275b2a1c8e507.png",
+  });
+
+  const tactical4 = await createTacticals({
+    name: "Ballistic Shield",
+    description: "To protect against direct fire. Only usable with sidearms.",
+    imageUrl: "https://i.gyazo.com/d840e7f166c21920d7bea02413d155b5.png",
+  });
+
+  const tactical5 = await createTacticals({
+    name: "M320 with Flashbang",
+    description: "Blinds and disorients those caught in its blast.",
+    imageUrl: "https://i.gyazo.com/d8939a5a4f66e205232626659579d114.png",
+  });
+
+  const tactical6 = await createTacticals({
+    name: "M320 with Stinger",
+    description: "Disperses rubber balls that stun and disorient targets.",
+    imageUrl: "https://i.gyazo.com/033df81bafaef577e51769ac5fdfe4fe.png",
+  });
+
+  const tactical7 = await createTacticals({
+    name: "M320 with Gas",
+    description:
+      "Causes difficulty breathing, burning sensations, and blurred vision.",
+    imageUrl: "https://i.gyazo.com/26a699d73ea39f846381abd297033eb9.png",
+  });
+}
+
+async function createInitialGrenades() {
+  try {
+    const grenade1 = await createGrenades({
+      name: "Flashbang",
+      description: "Blinds and disorients those caught in it's blast",
+      imageUrl: "https://i.gyazo.com/f8b31d76e64b636f73f3b225d85ca816.png",
+    });
+
+    const grenade2 = await createGrenades({
+      name: "CS Gas",
+      description:
+        "Causes difficulty breathing, burning sensations, and blurred vision.",
+      imageUrl: "https://i.gyazo.com/a8572ce2350087ef7aa8544696af3bfb.png",
+    });
+
+    const grenade3 = await createGrenades({
+      name: "Stinger Grenade",
+      description: "Disperses rubber balls that stun and disorient targets.",
+      imageUrl: "https://i.gyazo.com/feafcdf239578fe06b36c2e039c6d6ac.png",
+    });
+  } catch (error) {
+    console.error("Error creating initial grenades");
+    throw error;
+  }
+}
+
+async function createInitialDeployables() {
+  try {
+    const tactical1 = await createDeployables({
+      name: "C2 Explosives",
+      description:
+        "These explosive charges can be used to blow open locked doors, stunning those on the other side.",
+      imageUrl: "https://i.gyazo.com/dcf700693bfb287ea2949ff14946740b.png",
+    });
+
+    const tactical2 = await createDeployables({
+      name: "Door Wedge",
+      description: "Blocks a door from opening.",
+      imageUrl: "https://i.gyazo.com/59bd17194e016c071fcd9f44c9b4216d.png",
+    });
+
+    const tactical3 = await createDeployables({
+      name: "Lockpick Gun",
+      description: "The Lockpick Gun allows you to unlock doors quietly.",
+      imageUrl: "https://i.gyazo.com/4888324d4e814886a84ed8fc732580d7.png",
+    });
+
+    const tactical4 = await createDeployables({
+      name: "Pepper Spray",
+      description:
+        "Blinds and disorients those who are hit in the face or chest.",
+      imageUrl: "https://i.gyazo.com/5c7b864c1d662781208b536d465a4538.png",
+    });
+  } catch (error) {
+    console.error("Error creating initial deployables");
+    throw error;
+  }
+}
+
 async function buildTables() {
   try {
     client.connect();
@@ -579,6 +750,10 @@ async function buildTables() {
     await createInitialLessLethals();
     await createInitialSidearms();
     await createInitialAmmoTypes();
+    await createInitialArmor();
+    await createInitialTacticals();
+    await createInitialGrenades();
+    await createInitialDeployables();
   } catch (error) {
     throw error;
   }
@@ -659,6 +834,38 @@ async function testDB() {
     console.log("Calling get ammo type by id");
     const ammo1 = await getAmmoTypeById(2);
     console.log("Get ammo type by id result: ", ammo1);
+
+    console.log("Calling getAllArmor");
+    const armors = await getAllArmor();
+    console.log("Get all armor result: ", armors);
+
+    console.log("Calling getArmorById");
+    const armor1 = await getArmorById(3);
+    console.log("Get armor by id result: ", armor1);
+
+    console.log("Calling getAllTacticals");
+    const tacticals = await getAllTacticals();
+    console.log("Get all tacticals result: ", tacticals);
+
+    console.log("Calling getTacticalsById");
+    const tactical1 = await getTacticalById(4);
+    console.log("Get tacticals by id result", tactical1);
+
+    console.log("Calling get all grenades");
+    const grenades = await getAllGrenades();
+    console.log("Get all grenades result: ", grenades);
+
+    console.log("Calling getGrenadeById");
+    const grenade1 = await getGrenadeById(2);
+    console.log("Get grenade by id result: ", grenade1);
+
+    console.log("Calling getAllDeployables");
+    const deployables = await getAllDeployables();
+    console.log("Get all deployables result: ", deployables);
+
+    console.log("Calling getDeploaybleById");
+    const deployable1 = await getDeployableById(3);
+    console.log("Get deployable by id result: ", deployable1);
   } catch (error) {
     console.error("Error testing database");
     throw error;
