@@ -1,23 +1,23 @@
 const express = require("express");
 const apiRouter = express.Router();
-const { getAllMaps, getMapById } = require("../db");
+const { getAllMissions, getMissionById } = require("../db");
 
 apiRouter.get("/", async (req, res, next) => {
   try {
-    const maps = await getAllMaps();
-    res.send(maps);
+    const missions = await getAllMissions();
+    res.send(missions);
   } catch (error) {
     next(error);
   }
 });
 
-apiRouter.get("/:mapId", async (req, res, next) => {
-  const { mapId } = req.params;
+apiRouter.get("/:missionId", async (req, res, next) => {
+  const { missionId } = req.params;
 
   try {
-    const map = await getMapById(mapId);
-    if (map) {
-      res.send(map);
+    const mission = await getMissionById(missionId);
+    if (mission) {
+      res.send(mission);
     } else {
       next({ name: "NotFound", message: `No map found for ${mapId}` });
     }

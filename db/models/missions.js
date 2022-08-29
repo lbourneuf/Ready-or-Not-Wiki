@@ -31,7 +31,31 @@ async function getAllMissions() {
   }
 }
 
+async function getMissionById(id) {
+  if (!id) {
+    return;
+  }
+
+  try {
+    const {
+      rows: [mission],
+    } = await client.query(
+      `
+      SELECT *
+      FROM missions
+      WHERE id=$1
+    `,
+      [id]
+    );
+    return mission;
+  } catch (error) {
+    console.error("Failed to get mission by id");
+    throw error;
+  }
+}
+
 module.exports = {
   createMissions,
   getAllMissions,
+  getMissionById,
 };

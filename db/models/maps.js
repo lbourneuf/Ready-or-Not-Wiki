@@ -34,7 +34,7 @@ async function getAllMaps() {
   }
 }
 
-async function getMaptById(mapId) {
+async function getMapById(mapId) {
   if (!mapId) {
     return;
   }
@@ -85,6 +85,6 @@ module.exports = {
   // add your database adapter fns here
   createMaps,
   getAllMaps,
-  getMaptById,
+  getMapById,
   getMapByName,
 };
