@@ -32,7 +32,30 @@ async function getAllLaunchers() {
   }
 }
 
+async function getLauncherById(id) {
+  if (!id) {
+    return;
+  }
+  try {
+    const {
+      rows: [launcher],
+    } = await client.query(
+      `
+      SELECT *
+      FROM launchers
+      WHERE id=$1
+    `,
+      [id]
+    );
+    return launcher;
+  } catch (error) {
+    console.error("Failed to get launcher by id");
+    throw error;
+  }
+}
+
 module.exports = {
   createLaunchers,
   getAllLaunchers,
+  getLauncherById,
 };

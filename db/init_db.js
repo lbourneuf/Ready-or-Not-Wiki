@@ -6,7 +6,8 @@ const {
   getAllMaps,
   createMissions,
   getAllMissions,
-  getMaptById,
+  getMissionById,
+  getMapById,
   getMapByName,
   createAssaultRifles,
   getAssaultRifleById,
@@ -19,6 +20,7 @@ const {
   getShotgunById,
   createLaunchers,
   getAllLaunchers,
+  getLauncherById,
   createLessLethal,
   getAllLessLethals,
   getLessLethalById,
@@ -861,7 +863,7 @@ async function testDB() {
     console.log("This is all maps: ", maps);
 
     console.log("Calling getMapById");
-    const map1 = await getMaptById(1);
+    const map1 = await getMapById(1);
     console.log("Get map by Id result: ", map1);
 
     console.log("Calling getMapByName");
@@ -871,6 +873,10 @@ async function testDB() {
     console.log("Calling getAllMissions");
     const missions = await getAllMissions();
     console.log("This is all missions", missions);
+
+    console.log("Calling getMissionsById");
+    const mission1 = await getMissionById(2);
+    console.log("Get mission by id result: ", mission1);
 
     console.log("Calling getAllAssaultRifles");
     const rifles = await getAllAssaultRifles();
