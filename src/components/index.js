@@ -1,3 +1,11 @@
 export { default as App } from "./App";
 export { default as Maps } from "./Maps";
 export { default as Homepage } from "./Homepage";
+export { default as Missions } from "./Missions";
+export { default as AssaultRifles } from "./AssaultRifles";
+export { default as SubmachineGuns } from "./SubmachineGuns";
+export { default as Shotguns } from "./Shotguns";
+export { default as Launchers } from "./Launchers";
+export { default as LessLethals } from "./LessLethals";
+export { default as Sidearms } from "./Sidearms";
+export { default as AmmoTypes } from "./AmmoTypes";
