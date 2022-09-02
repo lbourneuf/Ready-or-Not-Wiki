@@ -7,7 +7,9 @@ const AmmoTypes = ({ ammoTypes, setAmmoTypes }) => {
         ammoTypes.map((ammo) => {
           return (
             <div key={ammo.id} className="all-ammoTypes">
-              <h1>{ammo.name}</h1>
+              <a href={`/ammotypes/${ammo.id}`}>
+                <h1>{ammo.name}</h1>
+              </a>
               <h3>{ammo.description}</h3>
               <img src={ammo.image_url} />
             </div>

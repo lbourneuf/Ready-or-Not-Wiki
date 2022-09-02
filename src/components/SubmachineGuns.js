@@ -7,7 +7,9 @@ const SubmachineGuns = ({ smgs, setSmgs }) => {
         smgs.map((smg) => {
           return (
             <div key={smg.id} className="all-smgs">
-              <h1>{smg.name}</h1>
+              <a href={`/submachineguns/${smg.id}`}>
+                <h1>{smg.name}</h1>
+              </a>
               <h3>{smg.description}</h3>
               <p>{smg.caliber}</p>
               <p>{smg.magazine_size}</p>

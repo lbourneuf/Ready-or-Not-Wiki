@@ -7,7 +7,9 @@ const LessLethals = ({ lessLethals, setLessLethals }) => {
         lessLethals.map((lethal) => {
           return (
             <div key={lethal.id} className="all-lesslethals">
-              <h1>{lethal.name}</h1>
+              <a href={`/lesslethals/${lethal.id}`}>
+                <h1>{lethal.name}</h1>
+              </a>
               <h3>{lethal.description}</h3>
               <img src={lethal.image_url} />
             </div>

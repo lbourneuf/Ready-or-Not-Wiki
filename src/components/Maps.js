@@ -6,7 +6,9 @@ const Maps = ({ maps, setMaps }) => {
         maps.map((item) => {
           return (
             <div key={item.id} className="all-maps">
-              <h1>{item.name}</h1>
+              <a href={`/maps/${item.id}`}>
+                <h1>{item.name}</h1>
+              </a>
               <h3>{item.description}</h3>
               <p>{item.missions_available}</p>
               <img src={item.image_url} />

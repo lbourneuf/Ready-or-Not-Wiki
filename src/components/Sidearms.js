@@ -7,7 +7,9 @@ const Sidearms = ({ sidearms, setSidearms }) => {
         sidearms.map((sidearm) => {
           return (
             <div key={sidearm.id} className="all-sidearms">
-              <h1>{sidearm.name}</h1>
+              <a href={`/sidearms/${sidearm.id}`}>
+                <h1>{sidearm.name}</h1>
+              </a>
               <h3>{sidearm.description}</h3>
               <p>{sidearm.caliber}</p>
               <p>{sidearm.magazine_size}</p>
