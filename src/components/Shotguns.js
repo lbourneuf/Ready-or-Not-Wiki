@@ -7,7 +7,9 @@ const Shotguns = ({ shotguns, setShotguns }) => {
         shotguns.map((shotgun) => {
           return (
             <div key={shotgun.id} className="all-shotguns">
-              <h1>{shotgun.name}</h1>
+              <a href={`/shotguns/${shotgun.id}`}>
+                <h1>{shotgun.name}</h1>
+              </a>
               <h3>{shotgun.description}</h3>
               <p>{shotgun.caliber}</p>
               <p>{shotgun.magazine_size}</p>

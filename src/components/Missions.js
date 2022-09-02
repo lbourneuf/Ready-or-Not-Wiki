@@ -7,7 +7,9 @@ const Missions = ({ missions, setMissions }) => {
         missions.map((mission) => {
           return (
             <div key={mission.id} className="all-missions">
-              <h1>{mission.name}</h1>
+              <a href={`/missions/${mission.id}`}>
+                <h1>{mission.name}</h1>
+              </a>
               <h3>{mission.description}</h3>
               <img src={mission.image_url} />
             </div>
