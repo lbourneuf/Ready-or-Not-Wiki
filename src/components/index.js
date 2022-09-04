@@ -27,3 +27,7 @@ export { default as IndivAmmoType } from "./IndivAmmoType";
 export { default as IndivArmor } from "./IndivArmor";
 export { default as IndivTactical } from "./IndivTactical";
 export { default as IndivGrenade } from "./IndivGrenade";
+export { default as IndivDeployable } from "./IndivDeployable";
+export { default as IndivHeadwear } from "./IndivHeadwear";
+export { default as IndivArmorMaterial } from "./IndivArmorMaterial";
+export { default as PageNotFound } from "./PageNotFound";
