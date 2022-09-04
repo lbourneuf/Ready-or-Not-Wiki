@@ -58,4 +58,8 @@ apiRouter.use("/headwear", headwearRouter);
 const materialRouter = require("./armorMaterial");
 apiRouter.use("/armormaterial", materialRouter);
 
+apiRouter.use("*", (req, res, next) => {
+  res.status(404).send({ message: "Page not found" });
+});
+
 module.exports = apiRouter;

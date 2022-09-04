@@ -29,6 +29,10 @@ import {
   IndivArmor,
   IndivTactical,
   IndivGrenade,
+  IndivDeployable,
+  IndivHeadwear,
+  IndivArmorMaterial,
+  PageNotFound,
 } from "./index";
 import "../style/App.css";
 import {
@@ -77,6 +81,9 @@ const App = () => {
   const [indivArmor, setIndivArmor] = useState([]);
   const [indivTactical, setIndivTactical] = useState([]);
   const [indivGrenade, setIndivGrenade] = useState([]);
+  const [indivDeployable, setIndivDeployable] = useState([]);
+  const [indivHeadwear, setIndivHeadwear] = useState([]);
+  const [indivArmorMaterial, setIndivArmorMaterial] = useState([]);
   useEffect(() => {
     const fetchAllMaps = async () => {
       try {
@@ -429,7 +436,7 @@ const App = () => {
           />
 
           <Route
-            path="deployables"
+            path="/deployables"
             element={
               <Deployables
                 deployables={deployables}
@@ -439,8 +446,28 @@ const App = () => {
           />
 
           <Route
+            path="/deployables/:deployableId"
+            element={
+              <IndivDeployable
+                indivDeployable={indivDeployable}
+                setIndivDeployable={setIndivDeployable}
+              />
+            }
+          />
+
+          <Route
             path="/headwear"
             element={<Headwear headwear={headwear} setHeadwear={setHeadwear} />}
+          />
+
+          <Route
+            path="/headwear/:headwearId"
+            element={
+              <IndivHeadwear
+                indivHeadwear={indivHeadwear}
+                setIndivHeadwear={setIndivHeadwear}
+              />
+            }
           />
 
           <Route
@@ -452,6 +479,18 @@ const App = () => {
               />
             }
           />
+
+          <Route
+            path="/armormaterial/:materialId"
+            element={
+              <IndivArmorMaterial
+                indivArmorMaterial={indivArmorMaterial}
+                setIndivArmorMaterial={setIndivArmorMaterial}
+              />
+            }
+          />
+
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
     </div>

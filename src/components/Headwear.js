@@ -7,7 +7,9 @@ const Headwear = ({ headwear, setHeadwear }) => {
         headwear.map((head) => {
           return (
             <div key={head.id} className="all-headwear">
-              <h1>{head.name}</h1>
+              <a href={`/headwear/${head.id}`}>
+                <h1>{head.name}</h1>
+              </a>
               <h3>{head.description}</h3>
               <img src={head.image_url} />
             </div>
