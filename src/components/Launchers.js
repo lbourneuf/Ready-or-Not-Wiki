@@ -7,7 +7,9 @@ const Launchers = ({ launchers, setLaunchers }) => {
         launchers.map((launcher) => {
           return (
             <div key={launcher.id} className="all-launchers">
-              <h1>{launcher.name}</h1>
+              <a className="item-name" href={`/launchers/${launcher.id}`}>
+                <h1 className="item-name">{launcher.name}</h1>
+              </a>
               <h3>{launcher.description}</h3>
               <img src={launcher.image_url} />
             </div>

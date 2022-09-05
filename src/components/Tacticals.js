@@ -7,8 +7,8 @@ const Tacticals = ({ tacticals, setTacticals }) => {
         tacticals.map((tactical) => {
           return (
             <div key={tactical.id} className="all-tacticals">
-              <a href={`/tacticals/${tactical.id}`}>
-                <h1>{tactical.name}</h1>
+              <a className="item-name" href={`/tacticals/${tactical.id}`}>
+                <h1 className="item-name">{tactical.name}</h1>
               </a>
               <h3>{tactical.description}</h3>
               <img src={tactical.image_url} />

@@ -31,3 +31,4 @@ export { default as IndivDeployable } from "./IndivDeployable";
 export { default as IndivHeadwear } from "./IndivHeadwear";
 export { default as IndivArmorMaterial } from "./IndivArmorMaterial";
 export { default as PageNotFound } from "./PageNotFound";
+export { default as MuiNavbar } from "./MuiNavbar";

@@ -7,8 +7,8 @@ const Deployables = ({ deployables, setDeployables }) => {
         deployables.map((deploy) => {
           return (
             <div key={deploy.id} className="all-deployables">
-              <a href={`/deployables/${deploy.id}`}>
-                <h1>{deploy.name}</h1>
+              <a className="item-name" href={`/deployables/${deploy.id}`}>
+                <h1 className="item-name">{deploy.name}</h1>
               </a>
               <h3>{deploy.description}</h3>
               <img src={deploy.image_url} />

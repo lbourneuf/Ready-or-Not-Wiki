@@ -7,8 +7,8 @@ const Grenades = ({ grenades, setGrenades }) => {
         grenades.map((grenade) => {
           return (
             <div key={grenade.id} className="all-grenades">
-              <a href={`/grenades/${grenade.id}`}>
-                <h1>{grenade.name}</h1>
+              <a className="item-name" href={`/grenades/${grenade.id}`}>
+                <h1 className="item-name">{grenade.name} </h1>
               </a>
               <h3>{grenade.description}</h3>
               <img src={grenade.image_url} />
