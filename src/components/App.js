@@ -33,6 +33,7 @@ import {
   IndivHeadwear,
   IndivArmorMaterial,
   PageNotFound,
+  MuiNavbar,
 } from "./index";
 import "../style/App.css";
 import {
@@ -253,6 +254,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Router>
+        <MuiNavbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route

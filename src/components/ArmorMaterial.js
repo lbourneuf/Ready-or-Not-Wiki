@@ -7,8 +7,8 @@ const ArmorMaterial = ({ armorMaterial, setArmorMaterial }) => {
         armorMaterial.map((material) => {
           return (
             <div key={material.id} className="all-armormaterial">
-              <a href={`/armormaterial/${material.id}`}>
-                <h1>{material.name}</h1>
+              <a className="item-name" href={`/armormaterial/${material.id}`}>
+                <h1 className="item-name">{material.name}</h1>
               </a>
               <h3>{material.description}</h3>
               <img src={material.image_url} />

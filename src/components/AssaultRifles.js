@@ -7,8 +7,8 @@ const AssaultRifles = ({ assaultRifles, setAssaultRifles }) => {
         assaultRifles.map((rifle) => {
           return (
             <div key={rifle.id} className="all-rifles">
-              <a href={`/assaultrifles/${rifle.id}`}>
-                <h1>{rifle.name}</h1>
+              <a className="item-name" href={`/assaultrifles/${rifle.id}`}>
+                <h1 className="item-name">{rifle.name}</h1>
               </a>
               <h3>{rifle.description}</h3>
               <p>{rifle.caliber}</p>
