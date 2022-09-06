@@ -26,8 +26,8 @@ const MuiNavbar = () => {
   };
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="fixed">
+        <Toolbar className="navbar">
           <IconButton
             size="large"
             edge="start"

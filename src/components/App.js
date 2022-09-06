@@ -254,7 +254,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Router>
-        <MuiNavbar />
+        {/* <MuiNavbar /> */}
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route
