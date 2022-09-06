@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+
+.app-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+  font-family: "Overpass", sans-serif;
+  background-image: url("https://i.gyazo.com/7e5527487ff419c2636f7ff2ad7d33e9.png");
+  background-size: cover;
+}
 .menu-link {
   text-decoration: none;
   color: black;
@@ -10,4 +21,38 @@
 
 .item-name:hover {
   text-decoration: underline;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.homepage-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  /* margin-top: 100px; */
+  background-color: gray;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.homepage-content {
+  margin: 10px;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+.aside {
+  float: right;
+  border: 2px solid black;
+  margin: 20px;
+  text-align: center;
+}
+
+.ron-home-img {
+  width: 75%;
 }
