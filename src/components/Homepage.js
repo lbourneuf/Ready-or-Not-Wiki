@@ -27,7 +27,11 @@ const Homepage = () => {
             src="https://i.gyazo.com/7a4dbced8a389e2862117a801bf3b919.png"
             className="ron-home-img"
           />
-          <a href="https://voidinteractive.net/" target="_blank">
+          <a
+            href="https://voidinteractive.net/"
+            target="_blank"
+            className="dev"
+          >
             <p>Developer: VOID Interactive</p>
           </a>
 
@@ -36,18 +40,21 @@ const Homepage = () => {
           <p>Genre: Tactical First-Person Shooter</p>
         </aside>
 
-        <h2>Story & Setting</h2>
+        <h2 className="homepage-title">Story & Setting</h2>
         <p>
           Ready or Not takes place in a 'twisted facsimile' of the United States
           of America. One which is downtrodden, cruel, and corrupt. Missions are
           set in places that range from derelict buildings to high-end penthouse
-          apartments. The game takes place in the city of Los Suenos. While
-          there is not a fully developed story for Ready or Not, mini-stories
-          are placed throughout the environments, giving players insight into
-          Los Suenan lives.
+          apartments.
+        </p>
+        <p>
+          The game takes place in the city of Los Suenos. While there is not a
+          fully developed story for Ready or Not, mini-stories are placed
+          throughout the environments, giving players insight into Los Suenan
+          lives.
         </p>
 
-        <h2>Gameplay</h2>
+        <h2 className="homepage-title">Gameplay</h2>
         <p>
           Ready or Not emphasizes smart, tactical play that follows realistic
           Rules of Engagement (RoE) that dictate what level of force a player is
@@ -64,7 +71,7 @@ const Homepage = () => {
           depending on how severe and numerous infractions are.
         </p>
 
-        <h3>Realism First</h3>
+        <h3 c>Realism First</h3>
 
         <p>
           VOID Interactive has consulted with police teams globally to create
