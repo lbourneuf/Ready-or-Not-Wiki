@@ -33,7 +33,8 @@ import {
   IndivHeadwear,
   IndivArmorMaterial,
   PageNotFound,
-  MuiNavbar,
+  Navbar,
+  Weapons,
 } from "./index";
 import "../style/App.css";
 import {
@@ -254,9 +255,10 @@ const App = () => {
   return (
     <div className="app-container">
       <Router>
-        {/* <MuiNavbar /> */}
+        <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/weapons" element={<Weapons />} />
           <Route
             path="/maps"
             element={<Maps maps={maps} setMaps={setMaps} />}
