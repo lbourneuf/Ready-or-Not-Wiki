@@ -11,10 +11,18 @@ const Homepage = () => {
         <h1> Ready or Not</h1>
         <p>
           Ready or Not is a realistic, tactical, first person shooter developed
-          by Void Interactive, released into an Alpha state on the August 19,
-          2019 on Windows PC. Developed on Epic Games's Unreal Engine 5, Ready
-          or Not later released into Steam Early Access on December 17, 2022,
-          receiving very positive reviews.
+          by
+          <a
+            href="https://voidinteractive.net/"
+            target="_blank"
+            className="dev"
+          >
+            VOID Interactive
+          </a>
+          , released into an Alpha state on the August 19, 2019 on Windows PC.
+          Developed on Epic Games's Unreal Engine 5, Ready or Not later released
+          into Steam Early Access on December 17, 2022, receiving very positive
+          reviews.
         </p>
         <p>
           Ready or Not is currently on sale at a base price of $39.99 USD. The
