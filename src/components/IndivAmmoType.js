@@ -27,7 +27,7 @@ const IndivAmmoType = ({ indivAmmoType, setIndivAmmoType }) => {
         <div className="indiv-ammotype" key={indivAmmoType.id}>
           <h1>{indivAmmoType.name}</h1>
           <h3>{indivAmmoType.description}</h3>
-          <img src={indivAmmoType.image_url} />
+          <img className="indiv-ammo-img" src={indivAmmoType.image_url} />
 
           <Link to="/ammotypes/" className="backto">
             Back to all ammo types

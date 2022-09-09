@@ -21,12 +21,12 @@ const IndivArmor = ({ indivArmor, setIndivArmor }) => {
     fetchArmorById();
   }, [armorId]);
   return (
-    <div className="all-armor">
+    <div className="indiv-armor-container">
       {indivArmor && indivArmor.id ? (
         <div className="indiv-armor" key={indivArmor.id}>
           <h1>{indivArmor.name}</h1>
           <h3>{indivArmor.description}</h3>
-          <img src={indivArmor.image_url} />
+          <img className="indiv-armor-img" src={indivArmor.image_url} />
 
           <Link to="/armor/" className="backto">
             Back to all armor

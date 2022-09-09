@@ -11,7 +11,7 @@ const ArmorMaterial = ({ armorMaterial, setArmorMaterial }) => {
                 <h1 className="item-name">{material.name}</h1>
               </a>
               <h3>{material.description}</h3>
-              <img src={material.image_url} />
+              <img className="material-img" src={material.image_url} />
             </div>
           );
         })

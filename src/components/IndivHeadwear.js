@@ -22,12 +22,12 @@ const IndivHeadwear = ({ indivHeadwear, setIndivHeadwear }) => {
     fetchHeadwearById();
   }, [headwearId]);
   return (
-    <div className="all-headwear">
+    <div className="indiv-headwear-container">
       {indivHeadwear && indivHeadwear.id ? (
         <div className="indiv-headwear" key={indivHeadwear.id}>
           <h1>{indivHeadwear.name}</h1>
           <h3>{indivHeadwear.description}</h3>
-          <img src={indivHeadwear.image_url} />
+          <img className="indiv-headwear-img" src={indivHeadwear.image_url} />
 
           <Link to="/headwear/" className="backto">
             Back to all headwear

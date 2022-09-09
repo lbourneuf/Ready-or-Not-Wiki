@@ -21,13 +21,13 @@ const IndivMap = ({ indivMap, setIndivMap }) => {
     fetchMapById();
   }, [mapId]);
   return (
-    <div className="all-maps">
+    <div className="indiv-maps-container">
       {indivMap && indivMap.id ? (
         <div className="indiv-map" key={indivMap.id}>
           <h1>{indivMap.name}</h1>
           <h3>{indivMap.description}</h3>
-          <p>{indivMap.missions_available}</p>
-          <img src={indivMap.image_url} />
+          <p>Missions available on this map: {indivMap.missions_available}</p>
+          <img className="indiv-map-img" src={indivMap.image_url} />
 
           <Link to="/maps/" className="backto">
             Back to all maps

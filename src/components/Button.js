@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export const Button = () => {
   return (
-    <Link to="/register">
-      <button className="btn">Register</button>
-    </Link>
+    <a href="https://voidinteractive.net/" target="_blank">
+      <button className="btn">Buy Ready or Not</button>
+    </a>
   );
 };

@@ -11,7 +11,7 @@ const Deployables = ({ deployables, setDeployables }) => {
                 <h1 className="item-name">{deploy.name}</h1>
               </a>
               <h3>{deploy.description}</h3>
-              <img src={deploy.image_url} />
+              <img className="deploy-img" src={deploy.image_url} />
             </div>
           );
         })

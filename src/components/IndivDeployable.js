@@ -22,12 +22,12 @@ const IndivDeployable = ({ indivDeployable, setIndivDeployable }) => {
     fetchDeployableById();
   }, [deployableId]);
   return (
-    <div className="all-deployables">
+    <div className="indiv-deployables-container">
       {indivDeployable && indivDeployable.id ? (
         <div className="indiv-deployable" key={indivDeployable.id}>
           <h1>{indivDeployable.name}</h1>
           <h3>{indivDeployable.description}</h3>
-          <img src={indivDeployable.image_url} />
+          <img className="indiv-deploy-img" src={indivDeployable.image_url} />
 
           <Link to="/deployables/" className="backto">
             Back to all deployables

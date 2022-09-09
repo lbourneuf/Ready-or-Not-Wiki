@@ -22,12 +22,15 @@ const IndivArmorMaterial = ({ indivArmorMaterial, setIndivArmorMaterial }) => {
     fetchArmorMaterialById();
   }, [materialId]);
   return (
-    <div className="all-materials">
+    <div className="indiv-materials-container">
       {indivArmorMaterial && indivArmorMaterial.id ? (
         <div className="indiv-material" key={indivArmorMaterial.id}>
           <h1>{indivArmorMaterial.name}</h1>
           <h3>{indivArmorMaterial.description}</h3>
-          <img src={indivArmorMaterial.image_url} />
+          <img
+            className="indiv-material-img"
+            src={indivArmorMaterial.image_url}
+          />
 
           <Link to="/armormaterial/" className="backto">
             Back to all armor material

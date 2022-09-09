@@ -10,8 +10,8 @@ const Maps = ({ maps, setMaps }) => {
                 <h1 className="item-name">{item.name}</h1>
               </a>
               <h3>{item.description}</h3>
-              <p>{item.missions_available}</p>
-              <img src={item.image_url} />
+              <p>Missions available on this map: {item.missions_available}</p>
+              <img className="maps-img" src={item.image_url} />
             </div>
           );
         })

@@ -20,12 +20,12 @@ const IndivMission = ({ indivMission, setIndivMission }) => {
     fetchMissionById();
   }, [missionId]);
   return (
-    <div className="all-missions">
+    <div className="indiv-missions-container">
       {indivMission && indivMission.id ? (
         <div className="indiv-mission" key={indivMission.id}>
           <h1>{indivMission.name}</h1>
           <h3>{indivMission.description}</h3>
-          <img src={indivMission.image_url} />
+          <img className="indiv-mission-img" src={indivMission.image_url} />
 
           <Link to="/missions/" className="backto">
             Back to all missions
