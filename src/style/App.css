@@ -17,8 +17,9 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Overpass", sans-serif;
-  background-image: url("https://i.gyazo.com/7e5527487ff419c2636f7ff2ad7d33e9.png");
-  background-size: cover;
+  background-color: #373737;
+  /* background-image: url("https://i.gyazo.com/7e5527487ff419c2636f7ff2ad7d33e9.png"); */
+  /* background-size: cover; */
 }
 
 .nav-bar {
@@ -108,7 +109,7 @@ i {
   top: 80px;
   list-style: none;
   text-align: start;
-  right: 260px;
+  right: 285px;
   padding: 0;
 }
 
@@ -148,7 +149,7 @@ button {
 
 .item-name {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .item-name:hover {
@@ -188,6 +189,387 @@ button {
 
 .ron-home-img {
   width: 75%;
+}
+
+.backto {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.backto:hover {
+  text-decoration: underline;
+}
+
+.all-ammoTypes-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.all-ammoTypes {
+  margin: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.ammo-img {
+  width: 25%;
+  border-radius: 5px;
+}
+
+.all-ammotypes {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.indiv-ammotype {
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-ammo-img {
+  width: 40%;
+  border-radius: 5px;
+}
+
+.all-armor-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.all-armor {
+  margin: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.armor-img {
+  width: 30%;
+  border-radius: 5px;
+}
+
+.indiv-armor-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.indiv-armor {
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-armor-img {
+  width: 60%;
+  border-radius: 5px;
+}
+
+.all-armormaterial-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.all-armormaterial {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.material-img {
+  border-radius: 5px;
+  width: 35%;
+}
+
+.indiv-materials-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.indiv-material {
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-material-img {
+  border-radius: 5px;
+  width: 35%;
+}
+
+.all-deployables-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 100;
+  align-items: center;
+  flex-direction: column;
+}
+
+.all-deployables {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.deploy-img {
+  border-radius: 5px;
+  width: 500px;
+}
+
+.indiv-deployables-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.indiv-deployable {
+  text-align: center;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.indiv-deploy-img {
+  width: 600px;
+  border-radius: 5px;
+}
+
+.all-headwear-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-headwear {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.headwear-img {
+  width: 50%;
+  border-radius: 5px;
+}
+
+.indiv-headwear-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-headwear {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-headwear-img {
+  width: 50%;
+  border-radius: 5px;
+}
+
+.all-maps-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-maps {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.maps-img {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.indiv-maps-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-map {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-map-img {
+  width: 600px;
+  border-radius: 5px;
+}
+
+.all-missions-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-missions {
+  margin: 10px;
+  font-size: 25px;
+}
+.missions-img {
+  border-radius: 5px;
+}
+
+.indiv-missions-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-mission {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-mission-img {
+  width: 500px;
+  border-radius: 5px;
+}
+
+.all-tacticals-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-tacticals {
+  margin: 10px;
+  font-size: 25px;
+}
+.tacticals-img {
+  width: 500px;
+}
+
+.indiv-tacticals-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-tactical {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-tactical-img {
+  width: 600px;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 960px) {
@@ -276,18 +658,18 @@ button {
 
 @media screen and (min-width: 2560px) {
   .dropdown-menu {
-    right: 350px;
+    right: 380px;
   }
 }
 
 @media screen and (max-width: 1600px) {
   .dropdown-menu {
-    right: 220px;
+    right: 230px;
   }
 }
 
 @media screen and (max-width: 1366px) {
   .dropdown-menu {
-    right: 100px;
+    right: 200px;
   }
 }

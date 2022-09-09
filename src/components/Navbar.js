@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import Dropdown from "./Dropdown";
-import EquipmentDropdown from "./EquipmentDropdown";
+
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
 

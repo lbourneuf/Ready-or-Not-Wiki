@@ -11,7 +11,7 @@ const Tacticals = ({ tacticals, setTacticals }) => {
                 <h1 className="item-name">{tactical.name}</h1>
               </a>
               <h3>{tactical.description}</h3>
-              <img src={tactical.image_url} />
+              <img className="tacticals-img" src={tactical.image_url} />
             </div>
           );
         })

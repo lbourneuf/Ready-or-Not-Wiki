@@ -11,7 +11,7 @@ const AmmoTypes = ({ ammoTypes, setAmmoTypes }) => {
                 <h1 className="item-name">{ammo.name}</h1>
               </a>
               <h3>{ammo.description}</h3>
-              <img src={ammo.image_url} />
+              <img className="ammo-img" src={ammo.image_url} />
             </div>
           );
         })

@@ -11,7 +11,7 @@ const Missions = ({ missions, setMissions }) => {
                 <h1 className="item-name">{mission.name}</h1>
               </a>
               <h3>{mission.description}</h3>
-              <img src={mission.image_url} />
+              <img className="missions-img" src={mission.image_url} />
             </div>
           );
         })

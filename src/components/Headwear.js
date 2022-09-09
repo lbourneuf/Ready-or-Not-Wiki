@@ -11,7 +11,7 @@ const Headwear = ({ headwear, setHeadwear }) => {
                 <h1 className="item-name">{head.name}</h1>
               </a>
               <h3>{head.description}</h3>
-              <img src={head.image_url} />
+              <img className="headwear-img" src={head.image_url} />
             </div>
           );
         })

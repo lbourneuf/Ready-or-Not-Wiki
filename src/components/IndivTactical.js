@@ -21,12 +21,12 @@ const IndivTactical = ({ indivTactical, setIndivTactical }) => {
     fetchTacticalById();
   }, [tacticalId]);
   return (
-    <div className="all-tacticals">
+    <div className="indiv-tacticals-container">
       {indivTactical && indivTactical.id ? (
         <div className="indiv-tactical" key={indivTactical.id}>
           <h1>{indivTactical.name}</h1>
           <h3>{indivTactical.description}</h3>
-          <img src={indivTactical.image_url} />
+          <img className="indiv-tactical-img" src={indivTactical.image_url} />
 
           <Link to="/tacticals/" className="backto">
             Back to all tacticals
