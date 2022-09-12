@@ -943,6 +943,49 @@ button {
   border-radius: 5px;
 }
 
+.error-title {
+  font-size: 200px;
+  text-align: center;
+}
+
+.error-message {
+  font-size: 100px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.error-btn {
+  padding: 8px 20px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #950000;
+  margin-bottom: 20px;
+}
+
+.error-gif-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.error-gif {
+  justify-self: center;
+}
+.error-btn:hover {
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 4px;
+  border: 2px solid #950000;
+}
+
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
