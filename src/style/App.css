@@ -182,15 +182,64 @@ button {
 
 .aside {
   float: right;
-  border: 2px solid black;
+  border: 2px solid white;
   margin: 20px;
   text-align: center;
 }
 
-.ron-home-img {
-  width: 75%;
+.aside-title {
+  background-color: white;
+  color: black;
+  padding: 12px;
+  margin: 0;
 }
 
+.ron-home-img {
+  width: 75%;
+  margin: 20px;
+}
+
+.world-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.world-content {
+  margin: 10px;
+  color: white;
+}
+
+.locations-list li {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+.locations-list li:hover {
+  text-decoration: underline;
+}
+
+.world-aside {
+  float: right;
+  border: 2px solid white;
+  margin: 20px;
+  text-align: center;
+}
+
+.world-aside-title {
+  background-color: white;
+  color: black;
+  padding: 12px;
+  margin: 0;
+}
+
+.los-suenos-img {
+  width: 500px;
+  margin: 20px;
+}
 .backto {
   text-decoration: none;
   color: white;
@@ -457,7 +506,7 @@ button {
 }
 
 .maps-img {
-  width: 400px;
+  width: 500px;
   border-radius: 5px;
 }
 
@@ -547,6 +596,7 @@ button {
 }
 .tacticals-img {
   width: 500px;
+  border-radius: 5px;
 }
 
 .indiv-tacticals-container {
@@ -569,6 +619,327 @@ button {
 
 .indiv-tactical-img {
   width: 600px;
+  border-radius: 5px;
+}
+
+.all-rifles-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-rifles {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.rifle-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-rifles-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+.indiv-assaultrifle {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-rifle-img {
+  width: 700px;
+  border-radius: 5px;
+}
+
+.all-smgs-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-smgs {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.smgs-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-smgs-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-smg {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-smg-img {
+  width: 700px;
+  border-radius: 5px;
+}
+
+.all-shotguns-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-shotguns {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.all-shotguns-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-shotgun-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-shotgun {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-shotgun-img {
+  width: 700px;
+  border-radius: 5px;
+}
+
+.all-sidearms-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-sidearms {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.all-sidearms-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-sidearm-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-sidearm {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-sidearm-img {
+  width: 700px;
+  border-radius: 5px;
+}
+
+.all-grenades-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-grenades {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.all-grenades-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-grenade-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-grenade {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-grenade-img {
+  width: 700px;
+  border-radius: 5px;
+}
+
+.all-launchers-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-launchers {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.all-launchers-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-launcher-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-launcher {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-launcher-img {
+  width: 700px;
+  border-radius: 5px;
+}
+
+.all-lesslethals-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-lesslethals {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.all-lesslethals-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-lesslethals-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-less-lethal {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-lesslethal-img {
+  width: 700px;
   border-radius: 5px;
 }
 

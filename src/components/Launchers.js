@@ -11,7 +11,7 @@ const Launchers = ({ launchers, setLaunchers }) => {
                 <h1 className="item-name">{launcher.name}</h1>
               </a>
               <h3>{launcher.description}</h3>
-              <img src={launcher.image_url} />
+              <img className="all-launchers-img" src={launcher.image_url} />
             </div>
           );
         })

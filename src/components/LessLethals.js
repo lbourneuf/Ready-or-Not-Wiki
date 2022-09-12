@@ -11,7 +11,7 @@ const LessLethals = ({ lessLethals, setLessLethals }) => {
                 <h1 className="item-name">{lethal.name}</h1>
               </a>
               <h3>{lethal.description}</h3>
-              <img src={lethal.image_url} />
+              <img className="all-lesslethals-img" src={lethal.image_url} />
             </div>
           );
         })

@@ -11,7 +11,7 @@ const Grenades = ({ grenades, setGrenades }) => {
                 <h1 className="item-name">{grenade.name} </h1>
               </a>
               <h3>{grenade.description}</h3>
-              <img src={grenade.image_url} />
+              <img className="all-grenades-img" src={grenade.image_url} />
             </div>
           );
         })

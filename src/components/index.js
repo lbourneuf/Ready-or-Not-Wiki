@@ -33,3 +33,4 @@ export { default as IndivArmorMaterial } from "./IndivArmorMaterial";
 export { default as PageNotFound } from "./PageNotFound";
 export { default as Navbar } from "./Navbar";
 export { default as Weapons } from "./Weapons";
+export { default as World } from "./World";

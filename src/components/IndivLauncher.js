@@ -22,12 +22,12 @@ const IndivLauncher = ({ indivLauncher, setIndivLauncher }) => {
     fetchLauncherById();
   }, [launcherId]);
   return (
-    <div className="all-launchers">
+    <div className="indiv-launcher-container">
       {indivLauncher && indivLauncher.id ? (
         <div className="indiv-launcher" key={indivLauncher.id}>
           <h1>{indivLauncher.name}</h1>
           <h3>{indivLauncher.description}</h3>
-          <img src={indivLauncher.image_url} />
+          <img className="indiv-launcher-img" src={indivLauncher.image_url} />
 
           <Link to="/launchers/" className="backto">
             Back to all launchers

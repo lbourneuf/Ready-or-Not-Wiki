@@ -11,9 +11,8 @@ const SubmachineGuns = ({ smgs, setSmgs }) => {
                 <h1 className="item-name">{smg.name}</h1>
               </a>
               <h3>{smg.description}</h3>
-              <p>{smg.caliber}</p>
-              <p>{smg.magazine_size}</p>
-              <img src={smg.image_url} />
+
+              <img className="smgs-img" src={smg.image_url} />
             </div>
           );
         })
