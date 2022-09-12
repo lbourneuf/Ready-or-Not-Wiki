@@ -21,14 +21,14 @@ const IndivSmg = ({ indivSmg, setIndivSmg }) => {
     fetchSmgById();
   }, [smgId]);
   return (
-    <div className="all-smgs">
+    <div className="indiv-smgs-container">
       {indivSmg && indivSmg.id ? (
         <div className="indiv-smg" key={indivSmg.id}>
           <h1>{indivSmg.name}</h1>
           <h3>{indivSmg.description}</h3>
-          <p>{indivSmg.caliber}</p>
-          <p>{indivSmg.magazine_size}</p>
-          <img src={indivSmg.image_url} />
+          <p>Caliber: {indivSmg.caliber}</p>
+          <p>Magazine Size: {indivSmg.magazine_size}</p>
+          <img className="indiv-smg-img" src={indivSmg.image_url} />
 
           <Link to="/submachineguns/" className="backto">
             Back to all SMGS

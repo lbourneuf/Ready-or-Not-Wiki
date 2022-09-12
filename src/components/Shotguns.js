@@ -11,9 +11,8 @@ const Shotguns = ({ shotguns, setShotguns }) => {
                 <h1 className="item-name">{shotgun.name}</h1>
               </a>
               <h3>{shotgun.description}</h3>
-              <p>{shotgun.caliber}</p>
-              <p>{shotgun.magazine_size}</p>
-              <img src={shotgun.image_url} />
+
+              <img className="all-shotguns-img" src={shotgun.image_url} />
             </div>
           );
         })

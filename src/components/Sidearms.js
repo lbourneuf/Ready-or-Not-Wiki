@@ -11,9 +11,8 @@ const Sidearms = ({ sidearms, setSidearms }) => {
                 <h1 className="item-name">{sidearm.name}</h1>
               </a>
               <h3>{sidearm.description}</h3>
-              <p>{sidearm.caliber}</p>
-              <p>{sidearm.magazine_size}</p>
-              <img src={sidearm.image_url} />
+
+              <img className="all-sidearms-img" src={sidearm.image_url} />
             </div>
           );
         })

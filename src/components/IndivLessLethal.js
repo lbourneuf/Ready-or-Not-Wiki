@@ -22,12 +22,15 @@ const IndivLessLethal = ({ indivLessLethal, setIndivLessLethal }) => {
     fetchLessLethalById();
   }, [lessLethalId]);
   return (
-    <div className="all-less-lethals">
+    <div className="indiv-lesslethals-container">
       {indivLessLethal && indivLessLethal.id ? (
         <div className="indiv-less-lethal" key={indivLessLethal.id}>
           <h1>{indivLessLethal.name}</h1>
           <h3>{indivLessLethal.description}</h3>
-          <img src={indivLessLethal.image_url} />
+          <img
+            className="indiv-lesslethal-img"
+            src={indivLessLethal.image_url}
+          />
 
           <Link to="/lesslethals" className="backto">
             Back to all less lethals

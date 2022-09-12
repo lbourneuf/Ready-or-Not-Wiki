@@ -21,14 +21,14 @@ const IndivAssaultRifle = ({ indivAssaultRifle, setIndivAssaultRifle }) => {
     fetchAssaultRifleById();
   }, [assaultRifleId]);
   return (
-    <div className="all-assaultrifles">
+    <div className="indiv-rifles-container">
       {indivAssaultRifle && indivAssaultRifle.id ? (
         <div className="indiv-assaultrifle" key={indivAssaultRifle.id}>
           <h1>{indivAssaultRifle.name}</h1>
           <h3>{indivAssaultRifle.description}</h3>
-          <p>{indivAssaultRifle.caliber}</p>
-          <p>{indivAssaultRifle.magazine_size}</p>
-          <img src={indivAssaultRifle.image_url} />
+          <p> Caliber: {indivAssaultRifle.caliber}</p>
+          <p>Magazine Size: {indivAssaultRifle.magazine_size}</p>
+          <img className="indiv-rifle-img" src={indivAssaultRifle.image_url} />
 
           <Link to="/assaultrifles/" className="backto">
             Back to all assault rifles

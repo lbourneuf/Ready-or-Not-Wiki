@@ -11,9 +11,8 @@ const AssaultRifles = ({ assaultRifles, setAssaultRifles }) => {
                 <h1 className="item-name">{rifle.name}</h1>
               </a>
               <h3>{rifle.description}</h3>
-              <p>{rifle.caliber}</p>
-              <p>{rifle.magazine_size}</p>
-              <img src={rifle.image_url} />
+
+              <img className="rifle-img" src={rifle.image_url} />
             </div>
           );
         })

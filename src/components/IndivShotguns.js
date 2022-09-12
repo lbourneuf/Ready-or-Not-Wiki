@@ -22,14 +22,14 @@ const IndivShotgun = ({ indivShotgun, setIndivShotgun }) => {
     fetchShotgunById();
   }, [shotgunId]);
   return (
-    <div className="all-shotguns">
+    <div className="indiv-shotgun-container">
       {indivShotgun && indivShotgun.id ? (
         <div className="indiv-shotgun" key={indivShotgun.id}>
           <h1>{indivShotgun.name}</h1>
           <h3>{indivShotgun.description}</h3>
-          <p>{indivShotgun.caliber}</p>
-          <p>{indivShotgun.magazine_size}</p>
-          <img src={indivShotgun.image_url} />
+          <p>Caliber: {indivShotgun.caliber}</p>
+          <p>Magazine Size: {indivShotgun.magazine_size}</p>
+          <img className="indiv-shotgun-img" src={indivShotgun.image_url} />
 
           <Link to="/shotguns/" className="backto">
             Back to all shotguns

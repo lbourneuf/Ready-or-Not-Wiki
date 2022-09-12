@@ -35,6 +35,7 @@ import {
   PageNotFound,
   Navbar,
   Weapons,
+  World,
 } from "./index";
 import "../style/App.css";
 import {
@@ -493,6 +494,8 @@ const App = () => {
               />
             }
           />
+
+          <Route path="/world" element={<World />} />
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>
