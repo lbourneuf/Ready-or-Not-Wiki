@@ -519,6 +519,25 @@ async function createInitialLaunchers() {
         "A rotary grenade launcher originally made for military use with high-explosive ammunition, it has found its use with Los Suenos' riot control units and SWAT teams.",
       imageUrl: "https://i.gyazo.com/dba9db41c158ab81bb525a6b32729b98.jpg",
     });
+
+    const launcher2 = await createLaunchers({
+      name: "M320 with Flashbang",
+      description: "Blinds and disorients those caught in its blast.",
+      imageUrl: "https://i.gyazo.com/d8939a5a4f66e205232626659579d114.png",
+    });
+
+    const launcher3 = await createLaunchers({
+      name: "M320 with Stinger",
+      description: "Disperses rubber balls that stun and disorient targets.",
+      imageUrl: "https://i.gyazo.com/033df81bafaef577e51769ac5fdfe4fe.png",
+    });
+
+    const launcher4 = await createLaunchers({
+      name: "M320 with Gas",
+      description:
+        "Causes difficulty breathing, burning sensations, and blurred vision.",
+      imageUrl: "https://i.gyazo.com/26a699d73ea39f846381abd297033eb9.png",
+    });
   } catch (error) {
     console.error("Error creating initial launchers");
     throw error;
@@ -678,25 +697,6 @@ async function createInitialTacticals() {
     name: "Ballistic Shield",
     description: "To protect against direct fire. Only usable with sidearms.",
     imageUrl: "https://i.gyazo.com/d840e7f166c21920d7bea02413d155b5.png",
-  });
-
-  const tactical5 = await createTacticals({
-    name: "M320 with Flashbang",
-    description: "Blinds and disorients those caught in its blast.",
-    imageUrl: "https://i.gyazo.com/d8939a5a4f66e205232626659579d114.png",
-  });
-
-  const tactical6 = await createTacticals({
-    name: "M320 with Stinger",
-    description: "Disperses rubber balls that stun and disorient targets.",
-    imageUrl: "https://i.gyazo.com/033df81bafaef577e51769ac5fdfe4fe.png",
-  });
-
-  const tactical7 = await createTacticals({
-    name: "M320 with Gas",
-    description:
-      "Causes difficulty breathing, burning sensations, and blurred vision.",
-    imageUrl: "https://i.gyazo.com/26a699d73ea39f846381abd297033eb9.png",
   });
 }
 
