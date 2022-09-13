@@ -245,7 +245,7 @@ const App = () => {
     const fetchAllArmorMaterial = async () => {
       try {
         const material = await getAllArmorMaterial();
-        console.log("These are the armor materials", material);
+
         setArmorMaterial(material);
       } catch (error) {
         console.error(error);
