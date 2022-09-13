@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getTacticalById } from "../axios-services";
+import { getTacticalById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivTactical = ({ indivTactical, setIndivTactical }) => {
@@ -28,9 +28,11 @@ const IndivTactical = ({ indivTactical, setIndivTactical }) => {
           <h3>{indivTactical.description}</h3>
           <img className="indiv-tactical-img" src={indivTactical.image_url} />
 
-          <Link to="/tacticals/" className="backto">
-            Back to all tacticals
-          </Link>
+          <div className="backto-container">
+            <Link to="/tacticals/">
+              <button className="backto">Back to all Tacticals</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No tactical to display</h1>

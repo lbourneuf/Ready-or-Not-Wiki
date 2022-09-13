@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./AmmoTypes.css";
 const AmmoTypes = ({ ammoTypes, setAmmoTypes }) => {
   return (
     <div className="all-ammoTypes-container">

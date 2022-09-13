@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Shotguns.css";
 const Shotguns = ({ shotguns, setShotguns }) => {
   return (
     <div className="all-shotguns-container">

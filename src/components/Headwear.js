@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Headwear.css";
 const Headwear = ({ headwear, setHeadwear }) => {
   return (
     <div className="all-headwear-container">

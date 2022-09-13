@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getAssaultRifleById } from "../axios-services";
+import { getAssaultRifleById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivAssaultRifle = ({ indivAssaultRifle, setIndivAssaultRifle }) => {
@@ -30,9 +30,11 @@ const IndivAssaultRifle = ({ indivAssaultRifle, setIndivAssaultRifle }) => {
           <p>Magazine Size: {indivAssaultRifle.magazine_size}</p>
           <img className="indiv-rifle-img" src={indivAssaultRifle.image_url} />
 
-          <Link to="/assaultrifles/" className="backto">
-            Back to all assault rifles
-          </Link>
+          <div className="backto-container">
+            <Link to="/assaultrifles/">
+              <button className="backto">Back to all Assault Rifles</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No assault rifle to display</h1>

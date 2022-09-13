@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getDeployableById } from "../axios-services";
+import { getDeployableById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivDeployable = ({ indivDeployable, setIndivDeployable }) => {
@@ -29,9 +29,11 @@ const IndivDeployable = ({ indivDeployable, setIndivDeployable }) => {
           <h3>{indivDeployable.description}</h3>
           <img className="indiv-deploy-img" src={indivDeployable.image_url} />
 
-          <Link to="/deployables/" className="backto">
-            Back to all deployables
-          </Link>
+          <div className="backto-container">
+            <Link to="/deployables/">
+              <button className="backto">Back to all Deployables</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No deployable to display</h1>

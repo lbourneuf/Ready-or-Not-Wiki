@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getShotgunById } from "../axios-services";
+import { getShotgunById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivShotgun = ({ indivShotgun, setIndivShotgun }) => {
@@ -31,9 +31,11 @@ const IndivShotgun = ({ indivShotgun, setIndivShotgun }) => {
           <p>Magazine Size: {indivShotgun.magazine_size}</p>
           <img className="indiv-shotgun-img" src={indivShotgun.image_url} />
 
-          <Link to="/shotguns/" className="backto">
-            Back to all shotguns
-          </Link>
+          <div className="backto-container">
+            <Link to="/shotguns/">
+              <button className="backto">Back to all Shotguns</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No shotguns to display</h1>

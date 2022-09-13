@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getSidearmById } from "../axios-services";
+import { getSidearmById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivSidearm = ({ indivSidearm, setIndivSidearm }) => {
@@ -32,9 +32,11 @@ const IndivSidearm = ({ indivSidearm, setIndivSidearm }) => {
           <p>Magazine Size: {indivSidearm.magazine_size}</p>
           <img className="indiv-sidearm-img" src={indivSidearm.image_url} />
 
-          <Link to="/sidearms/" className="backto">
-            Back to all sidearms
-          </Link>
+          <div className="backto-container">
+            <Link to="/sidearms/">
+              <button className="backto">Back to all Sidearms</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No sidearm to display</h1>

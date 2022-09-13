@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getArmorById } from "../axios-services";
+import { getArmorById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivArmor = ({ indivArmor, setIndivArmor }) => {
@@ -28,9 +28,11 @@ const IndivArmor = ({ indivArmor, setIndivArmor }) => {
           <h3>{indivArmor.description}</h3>
           <img className="indiv-armor-img" src={indivArmor.image_url} />
 
-          <Link to="/armor/" className="backto">
-            Back to all armor
-          </Link>
+          <div className="backto-container">
+            <Link to="/armor/">
+              <button className="backto">Back to all Armor</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No armor to display</h1>

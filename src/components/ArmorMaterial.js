@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./ArmorMaterial.css";
 const ArmorMaterial = ({ armorMaterial, setArmorMaterial }) => {
   return (
     <div className="all-armormaterial-container">

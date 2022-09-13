@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./AssaultRifles.css";
 const AssaultRifles = ({ assaultRifles, setAssaultRifles }) => {
   return (
     <div className="all-rifles-container">

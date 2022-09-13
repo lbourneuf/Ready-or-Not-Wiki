@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Launchers.css";
 const Launchers = ({ launchers, setLaunchers }) => {
   return (
     <div className="all-launchers-container">

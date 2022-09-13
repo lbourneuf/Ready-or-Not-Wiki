@@ -1,0 +1,44 @@
+.all-tacticals-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-tacticals {
+  margin: 10px;
+  font-size: 25px;
+}
+.tacticals-img {
+  width: 500px;
+  border-radius: 5px;
+}
+
+.indiv-tacticals-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-tactical {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-tactical-img {
+  width: 600px;
+  border-radius: 5px;
+}

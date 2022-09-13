@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Sidearms.css";
 const Sidearms = ({ sidearms, setSidearms }) => {
   return (
     <div className="all-sidearms-container">

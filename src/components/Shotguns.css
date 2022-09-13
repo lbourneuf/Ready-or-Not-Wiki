@@ -1,0 +1,45 @@
+.all-shotguns-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-shotguns {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.all-shotguns-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-shotgun-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-shotgun {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-shotgun-img {
+  width: 700px;
+  border-radius: 5px;
+}

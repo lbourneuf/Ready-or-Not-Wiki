@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getMapById } from "../axios-services";
+import { getMapById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivMap = ({ indivMap, setIndivMap }) => {
@@ -29,9 +29,11 @@ const IndivMap = ({ indivMap, setIndivMap }) => {
           <p>Missions available on this map: {indivMap.missions_available}</p>
           <img className="indiv-map-img" src={indivMap.image_url} />
 
-          <Link to="/maps/" className="backto">
-            Back to all maps
-          </Link>
+          <div className="backto-container">
+            <Link to="/maps/">
+              <button className="backto">Back to all Maps</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No map to display</h1>

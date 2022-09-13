@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Deployables.css";
 const Deployables = ({ deployables, setDeployables }) => {
   return (
     <div className="all-deployables-container">
