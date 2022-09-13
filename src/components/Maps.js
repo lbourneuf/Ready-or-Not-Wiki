@@ -1,4 +1,5 @@
 import React from "react";
+import "./Maps.css";
 const Maps = ({ maps, setMaps }) => {
   return (
     <div className="all-maps-container">

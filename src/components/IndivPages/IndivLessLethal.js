@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getLessLethalById } from "../axios-services";
+import { getLessLethalById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivLessLethal = ({ indivLessLethal, setIndivLessLethal }) => {
@@ -32,9 +32,11 @@ const IndivLessLethal = ({ indivLessLethal, setIndivLessLethal }) => {
             src={indivLessLethal.image_url}
           />
 
-          <Link to="/lesslethals" className="backto">
-            Back to all less lethals
-          </Link>
+          <div className="backto-container">
+            <Link to="/lesslethals/">
+              <button className="backto">Back to all Less Lethals</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No less lethal to display</h1>

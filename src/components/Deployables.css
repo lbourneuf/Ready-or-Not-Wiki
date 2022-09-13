@@ -1,0 +1,45 @@
+.all-deployables-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 100;
+  align-items: center;
+  flex-direction: column;
+}
+
+.all-deployables {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.deploy-img {
+  border-radius: 5px;
+  width: 500px;
+}
+
+.indiv-deployables-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.indiv-deployable {
+  text-align: center;
+  margin: 10px;
+  font-size: 25px;
+}
+
+.indiv-deploy-img {
+  width: 600px;
+  border-radius: 5px;
+}

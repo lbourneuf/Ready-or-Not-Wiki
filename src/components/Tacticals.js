@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Tacticals.css";
 const Tacticals = ({ tacticals, setTacticals }) => {
   return (
     <div className="all-tacticals-container">

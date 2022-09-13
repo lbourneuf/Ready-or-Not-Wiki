@@ -1,6 +1,7 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
+import "./Homepage.css";
 const Homepage = () => {
   return (
     <div className="homepage-container">

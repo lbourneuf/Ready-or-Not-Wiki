@@ -1,0 +1,45 @@
+.all-launchers-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100%;
+  /* display: flex; */
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.all-launchers {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.all-launchers-img {
+  width: 650px;
+  border-radius: 5px;
+}
+
+.indiv-launcher-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.indiv-launcher {
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-launcher-img {
+  width: 700px;
+  border-radius: 5px;
+}

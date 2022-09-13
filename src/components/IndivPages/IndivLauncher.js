@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getLauncherById } from "../axios-services";
+import { getLauncherById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivLauncher = ({ indivLauncher, setIndivLauncher }) => {
@@ -29,9 +29,11 @@ const IndivLauncher = ({ indivLauncher, setIndivLauncher }) => {
           <h3>{indivLauncher.description}</h3>
           <img className="indiv-launcher-img" src={indivLauncher.image_url} />
 
-          <Link to="/launchers/" className="backto">
-            Back to all launchers
-          </Link>
+          <div className="backto-container">
+            <Link to="/launchers/">
+              <button className="backto">Back to all Launchers</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No launcher to display</h1>

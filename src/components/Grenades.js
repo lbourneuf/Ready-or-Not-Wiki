@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Grenades.css";
 const Grenades = ({ grenades, setGrenades }) => {
   return (
     <div className="all-grenades-container">

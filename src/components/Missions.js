@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Missions.css";
 const Missions = ({ missions, setMissions }) => {
   return (
     <div className="all-missions-container">

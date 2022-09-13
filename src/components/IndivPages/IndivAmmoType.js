@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getAmmoTypeById } from "../axios-services";
+import { getAmmoTypeById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivAmmoType = ({ indivAmmoType, setIndivAmmoType }) => {
@@ -28,10 +28,11 @@ const IndivAmmoType = ({ indivAmmoType, setIndivAmmoType }) => {
           <h1>{indivAmmoType.name}</h1>
           <h3>{indivAmmoType.description}</h3>
           <img className="indiv-ammo-img" src={indivAmmoType.image_url} />
-
-          <Link to="/ammotypes/" className="backto">
-            Back to all ammo types
-          </Link>
+          <div className="backto-container">
+            <Link to="/ammotypes/">
+              <button className="backto">Back to all Ammo Types</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1> No ammo type to display</h1>

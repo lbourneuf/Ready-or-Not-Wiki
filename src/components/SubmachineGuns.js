@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./SubmachineGuns.css";
 const SubmachineGuns = ({ smgs, setSmgs }) => {
   return (
     <div className="all-smgs-container">

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getSubmachineGunById } from "../axios-services";
+import { getSubmachineGunById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivSmg = ({ indivSmg, setIndivSmg }) => {
@@ -30,9 +30,11 @@ const IndivSmg = ({ indivSmg, setIndivSmg }) => {
           <p>Magazine Size: {indivSmg.magazine_size}</p>
           <img className="indiv-smg-img" src={indivSmg.image_url} />
 
-          <Link to="/submachineguns/" className="backto">
-            Back to all SMGS
-          </Link>
+          <div className="backto-container">
+            <Link to="/submachineguns/">
+              <button className="backto">Back to all Submachine Guns</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No SMGS to display</h1>

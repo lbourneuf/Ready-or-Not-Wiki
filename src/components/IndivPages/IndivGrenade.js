@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getGrenadeById } from "../axios-services";
+import { getGrenadeById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivGrenade = ({ indivGrenade, setIndivGrenade }) => {
@@ -28,9 +28,11 @@ const IndivGrenade = ({ indivGrenade, setIndivGrenade }) => {
           <h3>{indivGrenade.description}</h3>
           <img className="indiv-grenade-img" src={indivGrenade.image_url} />
 
-          <Link to="/grenades/" className="backto">
-            Back to all grenades
-          </Link>
+          <div className="backto-container">
+            <Link to="/grenades/">
+              <button className="backto">Back to all Grenades</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No grenade to display</h1>

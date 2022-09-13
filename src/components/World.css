@@ -1,0 +1,41 @@
+.world-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.world-content {
+  margin: 10px;
+  color: white;
+}
+
+.locations-list li {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+.locations-list li:hover {
+  text-decoration: underline;
+}
+
+.world-aside {
+  float: right;
+  border: 2px solid white;
+  margin: 20px;
+  text-align: center;
+}
+
+.world-aside-title {
+  background-color: white;
+  color: black;
+  padding: 12px;
+  margin: 0;
+}
+
+.los-suenos-img {
+  width: 500px;
+  margin: 20px;
+}

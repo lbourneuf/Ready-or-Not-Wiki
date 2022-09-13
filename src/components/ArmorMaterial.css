@@ -1,0 +1,45 @@
+.all-armormaterial-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.all-armormaterial {
+  margin: 10px;
+  font-size: 25px;
+}
+
+.material-img {
+  border-radius: 5px;
+  width: 35%;
+}
+
+.indiv-materials-container {
+  margin: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: gray;
+  font-size: 20px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.indiv-material {
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.indiv-material-img {
+  border-radius: 5px;
+  width: 35%;
+}

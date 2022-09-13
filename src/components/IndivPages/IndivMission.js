@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getMissionById } from "../axios-services";
+import { getMissionById } from "../../axios-services";
 import { Link } from "react-router-dom";
 
 const IndivMission = ({ indivMission, setIndivMission }) => {
@@ -27,9 +27,11 @@ const IndivMission = ({ indivMission, setIndivMission }) => {
           <h3>{indivMission.description}</h3>
           <img className="indiv-mission-img" src={indivMission.image_url} />
 
-          <Link to="/missions/" className="backto">
-            Back to all missions
-          </Link>
+          <div className="backto-container">
+            <Link to="/missions/">
+              <button className="backto">Back to all Missions</button>
+            </Link>
+          </div>
         </div>
       ) : (
         <h1>No mission to display</h1>

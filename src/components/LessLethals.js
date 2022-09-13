@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./LessLethals.css";
 const LessLethals = ({ lessLethals, setLessLethals }) => {
   return (
     <div className="all-lesslethals-container">
